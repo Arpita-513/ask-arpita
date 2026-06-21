@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask Arpita</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="landing" id="landing">
+    <div class="landing-card">
+      <p class="eyebrow">Personal AI Workspace</p>
+      <h1>Ask Arpita</h1>
+      <p class="landing-text">
+        A simple AI assistant for study, coding, writing, projects and everyday ideas.
+      </p>
+      <button onclick="startApp()">Get Started</button>
+    </div>
+  </section>
+
+  <section class="app" id="app">
+    <aside class="sidebar">
+      <div>
+        <h2>Ask Arpita</h2>
+        <button class="new-chat" onclick="newChat()">+ New Chat</button>
+
+        <button class="menu active" onclick="openSection('chat', this)">Chat</button>
+        <button class="menu" onclick="openSection('saved', this)">Saved</button>
+        <button class="menu" onclick="openSection('voice', this)">Voice Chat</button>
+        <button class="menu" onclick="openSection('tools', this)">Tools</button>
+        <button class="menu" onclick="openSection('settings', this)">Settings</button>
+      </div>
+
+      <p class="sidebar-note">Built by Arpita Singh</p>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <div>
+          <h1 id="pageTitle">Chat</h1>
+          <p>Ask anything and get a clean answer.</p>
+        </div>
+        <button class="voice-btn" onclick="startVoiceInput()">🎙 Voice</button>
+      </header>
+
+      <div class="content" id="content">
+        <div class="welcome">
+          <h2>Hello, I am Ask Arpita</h2>
+          <p>Choose a prompt or type your own question below.</p>
+
+          <div class="suggestions">
+            <button onclick="quickAsk('Explain binary search in simple words')">Explain DSA</button>
+            <button onclick="quickAsk('Give me a unique full stack project idea')">Project idea</button>
+            <button onclick="quickAsk('Write a professional email for internship')">Write email</button>
+            <button onclick="quickAsk('Make a 3 hour study plan for me')">Study plan</button>
+          </div>
+        </div>
+
+        <div class="message bot">Hi, I am ready. What do you want to ask?</div>
+      </div>
+
+      <div class="input-area">
+        <input type="text" id="userInput" placeholder="Ask anything..." autocomplete="off" />
+        <button class="send-btn" onclick="sendMessage()">➤</button>
+      </div>
+    </main>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
